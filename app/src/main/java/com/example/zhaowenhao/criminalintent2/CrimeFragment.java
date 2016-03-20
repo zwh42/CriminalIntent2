@@ -13,8 +13,12 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import java.util.UUID;
+
 
 public class CrimeFragment extends Fragment {
+
+    public static final String EXTRA_CRIME_ID = "CRIME_ID";
 
     private Crime mCrime;
     private EditText mTitleField;
@@ -24,7 +28,8 @@ public class CrimeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
-        mCrime = new Crime();
+        UUID crimeID = (UUID) getActivity().getIntent().getSerializableExtra(EXTRA_CRIME_ID);
+        mCrime = CrimeLab.get(getActivity()).getCrime(crimeID);
     }
 
     @Override
