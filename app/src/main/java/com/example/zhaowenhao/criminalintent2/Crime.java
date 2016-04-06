@@ -74,6 +74,6 @@ public class Crime {
             mTitle = json.getString(JSON_TITLE);
         }
         mSolved = json.getBoolean(JSON_SOLVED);
-        mDate = new Date(); /// ??? need to fix
+        mDate = new Date(json.getLong(JSON_DATE)); /// ??? need to fix
     }
 }
