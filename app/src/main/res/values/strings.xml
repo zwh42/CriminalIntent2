@@ -14,5 +14,6 @@
     <string name="subtitle">If you see something, say something.</string>
     <string name="delete_crime">Delete</string>
     <string name="date_picker_title">Date of Crime:</string>
+    <string name="take">Shot!</string>
 
 </resources>
