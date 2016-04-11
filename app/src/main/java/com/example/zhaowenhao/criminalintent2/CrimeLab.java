@@ -34,13 +34,13 @@ public class CrimeLab {
         }
 
 
-
+        /* to generate test crimes
         for (int i = 0 ; i < 100; i++){
             Crime c  = new Crime();
             c.setSolved(i%2 == 0);
             c.setTitle("Crime #" + i);
             mCrimes.add(c);
-        }
+        } */
     }
 
     public static CrimeLab get (Context context){
@@ -73,6 +73,10 @@ public class CrimeLab {
             Log.e(TAG, "Error saving crimes: ", e);
             return false;
         }
+    }
+
+    public void addCrime(Crime c){
+        mCrimes.add(c);
     }
 
     public void deleteCrime(Crime c){
