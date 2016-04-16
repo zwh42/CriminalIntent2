@@ -15,12 +15,14 @@ public class Crime {
     private Date mDate;
     private boolean mSolved;
     private Photo mPhoto;
+    private String mSuspect;
 
     private static final String JSON_ID = "id";
     private static final String JSON_TITLE = "title";
     private static final String JSON_SOLVED = "solved";
     private static final String JSON_DATE = "date";
     private static final String JSON_PHOTO = "photo";
+    private static final String JSON_SUSPECT = "suspect";
 
     public Crime(){
         mID = UUID.randomUUID();
@@ -29,6 +31,15 @@ public class Crime {
 
     public UUID getID() {
         return mID;
+    }
+
+
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
     }
 
     public String getTitle() {
@@ -69,6 +80,7 @@ public class Crime {
         if(mPhoto != null){
             json.put(JSON_PHOTO, mPhoto.toJSON());
         }
+        json.put(JSON_SUSPECT, mSuspect);
 
         return json;
     }
