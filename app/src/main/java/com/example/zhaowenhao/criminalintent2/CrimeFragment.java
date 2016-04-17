@@ -160,7 +160,7 @@ public class CrimeFragment extends Fragment {
             }
         });
 
-        if (mCrime.getSuspect() != null){
+        if (mCrime.getSuspect() != null){ 
             mSuspectButton.setText(mCrime.getSuspect());
         }
 
